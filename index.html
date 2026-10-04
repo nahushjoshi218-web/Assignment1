@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h2>JavaScript Calculator</h2>
+
+    <input type="number" id="n1" placeholder="Enter first number">
+    <br><br>
+
+    <input type="number" id="n2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="calc('+')">Add</button>
+    <button onclick="calc('-')">Subtract</button>
+    <button onclick="calc('*')">Multiply</button>
+    <button onclick="calc('/')">Divide</button>
+
+    <h3 id="res">Result: </h3>
+
+    <script>
+        function calc(op) {
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let r;
+
+            if (op == '+') {
+                r = a + b;
+            }
+            else if (op == '-') {
+                r = a - b;
+            }
+            else if (op == '*') {
+                r = a * b;
+            }
+            else if (op == '/') {
+                if (b == 0) {
+                    r = "Cannot divide by zero";
+                } else {
+                    r = a / b;
+                }
+            }
+
+            document.getElementById("res").innerText = "Result: " + r;
+        }
+    </script>
+
+</body>
+</html>
