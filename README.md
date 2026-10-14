@@ -11,6 +11,3 @@ To create a calculator using JavaScript functions.
 
 ## Technologies
 HTML, CSS, JavaScript
-
-## How to Run
-Open `index.html` in a web browser.
